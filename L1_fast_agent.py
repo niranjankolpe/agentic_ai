@@ -1,11 +1,11 @@
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 from dataclasses import dataclass
 from langchain_community.utilities.sql_database import SQLDatabase
 
 # Initialize your database connection
 db = SQLDatabase.from_uri("sqlite:///Chinook.db")
-
-import warnings
-warnings.filterwarnings("ignore")
 
 # define context structure to support dependency injection
 @dataclass
